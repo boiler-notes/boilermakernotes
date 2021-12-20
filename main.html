@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boilermaker Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link href="CS_159.htm">
+
+</head>
+
+
+<body onload="reportWindowSize()">
+
+<header>
+<div class="header">
+<h1 style="text-align:center; font-family: Fantasy; font-size: 50px;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: white;letter-spacing: 2px; color: rgb(206,184,136);">Boilermaker Notes</h1>
+</div>
+
+<div id="navbar">
+  <a  class="active" href="javascript:void(0)">Home</a>
+  <a href="find.html">Find</a>
+
+   <div class="dropdown">
+    <button class="dropbtn">Classes 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">CS 159</a></br>
+      <a href="#">MA 261</a></br>
+      <a href="#">ENGR 133</a></br>
+    </div>
+  </div> 
+
+  <a href="donate.html">Donate</a>
+
+  
+</div>
+</header>
+
+
+
+<div class="content">
+
+
+<div id="test" class="container">
+	<div class="containerhead">
+       <p class="textheader">What is Boilermaker Notes</p>
+	</div>
+	<div class="containercontent">
+	   <p class="describe">This site was been created as a way to store and share notes so that they can be accessible and used by all Purdue students. 
+	   It is merely a way to help out fellow students.  It can be be a way for you to review for your finals. 
+	   You can use it as a way to study on the go. Or to verify that you arent missing any important concepts
+	   You can use it to check formulas or other concepts to see if you copied it down right.
+	   
+	   </p>
+	   <p class="describe">over time we are going to add new features and tools to this website to help you in other ways.  We will post all up updates on this main page</p>
+	   <p class="describe">All published notes are owned by their creators and are not meant for redistribution</p>
+	</div>
+</div>
+
+
+
+<div class="container" style="float: right; ">
+	<div class="containerhead">
+       <p class="textheader">Current Features</p>
+	</div>
+	<div id="right" class="containercontent" style="height: auto; min-height:150 px">
+	   <ul class="describe" >
+			<li>Course pages which will display class note and studyguides</li>
+			<li>Customizable styles and formatting for easy readability</li>
+			<li>Find section so that you can search for current topics</li>
+
+	</ul>
+	</div>
+</div>
+
+<div  class="container" style="float: right; ">
+	<div class="containerhead">
+       <p class="textheader">Contact</p>
+	</div>
+	<div id="left" class="containercontent" style="height: auto; min-height:150 px">
+	Email: boilermakernotes@gmail.com
+	use this email to reach out to concerns or to report errors in notes</br></br>
+	<button onclick="donate()"style="width: 100%; display: inline-block; height: 50px; background-color:black; color:white;  text-align: center; font-size: 20px">
+	Venmo
+	</button>
+	</div>
+</div>
+
+</div>
+
+
+<footer>
+<div style="padding:16px; background-color: rgb(100,100,100);" >
+	<p class='footer' style="text-align:center">This project is not affiliated with Purdue University or any of its departments. The creators do not profit off of this project in any way.</p>
+	<p class='footer' style="text-align:center">All notes and materials posted are owned they their creators</p>
+	<p class='footer' style="text-align:center">&copy; Boilermaker Notes</p>
+
+</div>
+</footer>
+
+
+<script>
+function reportWindowSize() {
+ var div1=document.getElementById("left");
+ var div2=document.getElementById("right");
+ var elementHeight=0
+ div2.style.height="auto"
+ div1.style.height="auto"
+
+ if(innerWidth*0.25>275){
+	div1.style.width = ((innerWidth-235)*0.25)+'px';
+	div2.style.width = ((innerWidth-235)*0.75) +'px';
+	
+	 if(div1.offsetHeight>div2.offsetHeight){
+ 	var computedStyle = getComputedStyle(div1);
+	elementHeight = div1.offsetHeight;  // height with padding
+	elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
+
+	div2.style.height = elementHeight-20 + 'px';
+ 
+
+ 
+ }else{
+  	var computedStyle = getComputedStyle(div2);
+	elementHeight = div2.offsetHeight;  // height with padding
+	elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
+ 
+	div1.style.height = elementHeight-20 + 'px';
+
+ }
+	
+	
+ }else{
+	div1.style.width = (innerWidth-160) +'px';
+	div2.style.width = (innerWidth-160) +'px';
+ }
+}
+
+window.onresize = reportWindowSize;
+
+function donate(){
+	window.location.href = 'donate.html';
+}
+</script>
+</body>
+</html>
