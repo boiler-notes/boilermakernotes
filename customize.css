@@ -1,0 +1,51 @@
+.WordSection1 p, h1, h2, h3, h4, h5{
+	margin-bottom:1px;
+	margin-top: 1px;
+}
+
+
+.largeText {
+
+	font-size: 25px;
+	
+}
+
+.mediumText{
+
+	font-size: 17px;
+}
+.smallText{
+
+	font-size: 12px;
+}
+
+
+
+.Handwritting p, .Handwritting h1, .Handwritting h2, .Handwritting h3, .Handwritting h4, .Handwritting h5{
+	font-family: Bradley Hand, cursive;
+
+}
+
+.Simple p, .Simple h1, .Simple h2, .Simple h3, .Simple h4, .Simple h5{
+	font-family: Helvetica Neue, san serif;
+}
+.Coding p, .Coding h1, .Coding h2, .Coding h3, .Coding h4, .Coding h5{
+	font-family: Consolas;
+}
+
+.littleSpace p, .littleSpace h1, .littleSpace h2, .littleSpace h3, .littleSpace h4, .littleSpace h5{
+	line-height: 1.1;
+}
+
+
+
+.mediumSpace p, .mediumSpace h1, .mediumSpace h2, .mediumSpace h3, .mediumSpace h4, .mediumSpace h5{
+	line-height: 1.5;
+}
+
+
+.largeSpace p, .largeSpace h1, .largeSpace h2, .largeSpace h3, .largeSpace h4, .largeSpace h5{
+	line-height: 2;
+}
+
+
