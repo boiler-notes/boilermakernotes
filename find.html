@@ -63,30 +63,31 @@
 </div>
 <script>
 	var id="content"
+	var frm=document.getElementById("myIframe").contenWindow
 	function changeFont(){
-		  document.getElementById(id).classList.remove("Handwritting");
-		  document.getElementById(id).classList.remove("Simple");
-		  document.getElementById(id).classList.remove("Coding");
+		  frm.document.getElementById(id).classList.remove("Handwritting");
+		  frm.document.getElementById(id).classList.remove("Simple");
+		  frm.document.getElementById(id).classList.remove("Coding");
 		 
-		  document.getElementById(id).classList.add(document.getElementById("font").value);
+		  frm.document.getElementById(id).classList.add(document.getElementById("font").value);
 		 	  
 	}
 	
 	function changeSize(){
-		  document.getElementById(id).classList.remove("largeText");
-		  document.getElementById(id).classList.remove("mediumText");
-		  document.getElementById(id).classList.remove("smallText");
+		  frm.document.getElementById(id).classList.remove("largeText");
+		  frm.document.getElementById(id).classList.remove("mediumText");
+		  frm.document.getElementById(id).classList.remove("smallText");
 		 
-		  document.getElementById(id).classList.add(document.getElementById("size").value);
+		  frm.document.getElementById(id).classList.add(document.getElementById("size").value);
 		 	  
 	}
 	
 		function changeSpacing(){
-		  document.getElementById(id).classList.remove("littleSpace");
-		  document.getElementById(id).classList.remove("mediumSpace");
-		  document.getElementById(id).classList.remove("largeSpace");
+		  frm.document.getElementById(id).classList.remove("littleSpace");
+		  frm.document.getElementById(id).classList.remove("mediumSpace");
+		  frm.document.getElementById(id).classList.remove("largeSpace");
 		 
-		  document.getElementById(id).classList.add(document.getElementById("space").value);
+		  frm.document.getElementById(id).classList.add(document.getElementById("space").value);
 		 	  
 	}
 	
