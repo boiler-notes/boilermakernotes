@@ -62,6 +62,24 @@
   </select>
 </div>
 <script>
+	
+	function resize()
+        // function execute while load the iframe
+        {
+          var frame = document.getElementById("Iframe");
+          // set the height of the iframe as 
+          // the height of the iframe content
+          frame.style.height = 
+          (frame.contentWindow.document.body.scrollHeight + 50) + 'px';
+           
+  
+         // set the width of the iframe as the 
+         // width of the iframe content
+         frame.style.width  = 
+          frame.contentWindow.document.body.scrollWidth+'px';
+              
+        }
+	
 	var id="content"
 
 	function changeFont(){
@@ -96,33 +114,10 @@
 		  resize()
 	}
 	
-	// Selecting the iframe element
-        var frame = document.getElementById("Iframe");
-          
-        // Adjusting the iframe height onload event
-        frame.onload = resize();
-		
-	function resize()
-        // function execute while load the iframe
-        {
-          // set the height of the iframe as 
-          // the height of the iframe content
-          frame.style.height = 
-          (frame.contentWindow.document.body.scrollHeight + 50) + 'px';
-           
-  
-         // set the width of the iframe as the 
-         // width of the iframe content
-         frame.style.width  = 
-          frame.contentWindow.document.body.scrollWidth+'px';
-              
-        }
-	
-	
 
 </script>
 
-<iframe id="Iframe" src="CS_159.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no></iframe>
+<iframe id="Iframe" src="CS_159.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no onload="resize()"></iframe>
 <div class=content>
 Search for key terms or classes:</br><input type="text" placeholder="Search.." name="search">
       <button type="submit"><i class="fa fa-search"></i></button>
