@@ -71,6 +71,7 @@
 		  frm.document.getElementById(id).classList.remove("Coding");
 		 
 		  frm.document.getElementById(id).classList.add(document.getElementById("font").value);
+		  resize()
 		 	  
 	}
 	
@@ -81,6 +82,7 @@
 		  frm.document.getElementById(id).classList.remove("smallText");
 		 
 		  frm.document.getElementById(id).classList.add(document.getElementById("size").value);
+		  resize()
 		 	  
 	}
 	
@@ -91,24 +93,16 @@
 		  frm.document.getElementById(id).classList.remove("largeSpace");
 		 
 		  frm.document.getElementById(id).classList.add(document.getElementById("space").value);
-		 	  
+		  resize()
 	}
 	
-	
-
-</script>
-
-<iframe id="Iframe" src="CS_159.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no></iframe>
-<div class=content>
-Search for key terms or classes:</br><input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-</div>
-<script>
-        // Selecting the iframe element
+	// Selecting the iframe element
         var frame = document.getElementById("Iframe");
           
         // Adjusting the iframe height onload event
-        frame.onload = function()
+        frame.onload = resize();
+		
+	function resize()
         // function execute while load the iframe
         {
           // set the height of the iframe as 
@@ -123,7 +117,17 @@ Search for key terms or classes:</br><input type="text" placeholder="Search.." n
           frame.contentWindow.document.body.scrollWidth+'px';
               
         }
-        </script>
+	
+	
+
+</script>
+
+<iframe id="Iframe" src="CS_159.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no></iframe>
+<div class=content>
+Search for key terms or classes:</br><input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+</div>
+
 
 </body>
 </html>
