@@ -63,8 +63,9 @@
 </div>
 <script>
 	var id="content"
-	var frm=document.getElementById("Iframe").contentWindow
+
 	function changeFont(){
+		  var frm=document.getElementById("Iframe").contentWindow
 		  frm.document.getElementById(id).classList.remove("Handwritting");
 		  frm.document.getElementById(id).classList.remove("Simple");
 		  frm.document.getElementById(id).classList.remove("Coding");
@@ -74,6 +75,7 @@
 	}
 	
 	function changeSize(){
+		  var frm=document.getElementById("Iframe").contentWindow
 		  frm.document.getElementById(id).classList.remove("largeText");
 		  frm.document.getElementById(id).classList.remove("mediumText");
 		  frm.document.getElementById(id).classList.remove("smallText");
@@ -82,7 +84,8 @@
 		 	  
 	}
 	
-		function changeSpacing(){
+	function changeSpacing(){
+		  var frm=document.getElementById("Iframe").contentWindow
 		  frm.document.getElementById(id).classList.remove("littleSpace");
 		  frm.document.getElementById(id).classList.remove("mediumSpace");
 		  frm.document.getElementById(id).classList.remove("largeSpace");
