@@ -33,19 +33,3 @@
 	font-family: Consolas;
 }
 
-.littleSpace p, .littleSpace h1, .littleSpace h2, .littleSpace h3, .littleSpace h4, .littleSpace h5{
-	line-height: 1.1;
-}
-
-
-
-.mediumSpace p, .mediumSpace h1, .mediumSpace h2, .mediumSpace h3, .mediumSpace h4, .mediumSpace h5{
-	line-height: 1.5;
-}
-
-
-.largeSpace p, .largeSpace h1, .largeSpace h2, .largeSpace h3, .largeSpace h4, .largeSpace h5{
-	line-height: 2;
-}
-
-
