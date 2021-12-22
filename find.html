@@ -68,9 +68,16 @@
 	
 	function changeSize(){
 		  var frm=document.getElementById("Iframe").contentWindow
-		  frm.document.getElementById(id).classList.remove("largeText");
-		  frm.document.getElementById(id).classList.remove("mediumText");
-		  frm.document.getElementById(id).classList.remove("smallText");
+		  var val=document.getElementById("size").value;
+		
+		
+		var tags=["p","h1","h2","h3","h4","h5","h6"]
+		for(var j = 0; j < tags.length; j++){
+			var h1Elements = frm.document.getElementsByTagName(tags[j]);
+			for(var i = 0; i < h1Elements.length; i++) {
+			   h1Elements[i].style.fontSizeAdjust =(val);
+			}
+		}
 		 
 		  frm.document.getElementById(id).classList.add(document.getElementById("size").value);
 		  resize();
@@ -108,18 +115,11 @@
 
   </select>
   
-   <label for="size">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Font Size:</label>
-  <select id="size" onchange="changeSize()">
-    <option value="largeText">Large</option>
-    <option value="mediumText" selected>Medium</option>
-    <option value="smallText" >Small</option>
-
-  </select>
+     <label for="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Font Size:</label>
+     <input type="range" id="space" name="space" min="0" max="3" value="0.5" step="0.01" onchange="changeSize()">
   
      <label for="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Line Space:</label>
      <input type="range" id="space" name="space" min="1" max="2" value="1.2" step="0.01" onchange="changeSpacing()">
-
-  </select>
 </div>
 
 <iframe id="Iframe" src="CS_159.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no onload="resize()"></iframe>
