@@ -107,7 +107,7 @@
 	
 	
 	function printDiv() {
-            var divContents = document.getElementById("Iframe").contentWindow.document.getElementById(id);
+            var divContents = document.getElementById("Iframe").contentWindow.document.innerHTML;
             var a = window.open('', '', 'height=500, width=500');
             a.document.write(divContents);
             a.document.close();
