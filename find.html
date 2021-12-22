@@ -82,7 +82,7 @@
 	function changeSpacing(){
 		  var frm=document.getElementById("Iframe").contentWindow;
 		  var val=document.getElementById("space").value;
-		  frm.document.getElementById(id).style.lineHeight=val;
+		  frm.document.getElementById(id).style.lineHeight=val+ 'px';;
 
 		  resize();
 	}
