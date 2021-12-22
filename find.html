@@ -38,6 +38,13 @@
 
 <script>
 	
+	var id="content"
+		
+	function initalizeStyle(){
+		changeFont();
+		changeSpacing();
+		changeSpacing()
+	}
 	function resize()
         // function execute while load the iframe
         {
@@ -45,15 +52,8 @@
           // set the height of the iframe as 
           // the height of the iframe content
           frame.style.height = 
-          (frame.contentWindow.document.body.scrollHeight + 50) + 'px';
-           
-  
-
-              
+          (frame.contentWindow.document.body.scrollHeight + 50) + 'px';     
         }
-
-	
-	var id="content"
 
 	function changeFont(){
 		  var frm=document.getElementById("Iframe").contentWindow
