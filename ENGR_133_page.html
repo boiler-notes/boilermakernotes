@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boilermaker Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="customize.css">
+
+
+</head>
+<body>
+<header>
+<div class="header">
+<h1 style="text-align:center; font-family: Fantasy; font-size: 50px;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: white;letter-spacing: 2px; color: rgb(206,184,136);">Boilermaker Notes</h1>
+</div>
+
+<div id="navbar">
+  <a href="index.html">Home</a>
+  <a  class="active" href="javascript:void(0)">Find</a>
+
+   <div class="dropdown">
+    <button class="dropbtn">Classes 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">CS 159</a></br>
+      <a href="#">MA 261</a></br>
+      <a href="#">ENGR 133</a></br>
+    </div>
+  </div> 
+
+  <a href="donate.html">Donate</a>
+
+  
+</div>
+</header>
+
+<script>
+	
+	var id="content";
+		
+	function initalizeStyle(){
+		changeFont();
+		changeSize();
+		changeSpacing();
+	}
+	
+	function resize()
+        // function execute while load the iframe
+        {
+          var frame = document.getElementById("Iframe");
+          // set the height of the iframe as 
+          // the height of the iframe content
+          frame.style.height = 
+          (frame.contentWindow.document.body.scrollHeight + 50) + 'px';     
+        }
+
+	function changeFont(){
+		  var frm=document.getElementById("Iframe").contentWindow
+		  frm.document.getElementById(id).classList.remove("Handwritting");
+		  frm.document.getElementById(id).classList.remove("Simple");
+		  frm.document.getElementById(id).classList.remove("Coding");
+		 
+		  frm.document.getElementById(id).classList.add(document.getElementById("font").value);
+		  resize();
+		 	  
+	}
+	
+	function changeSize(){
+		  var frm=document.getElementById("Iframe").contentWindow
+		  var val=document.getElementById("size").value;
+		
+		
+		var tags=["h1","h2","h3","h4","h5","h6","p"]
+		var counter=0
+		for(var j = 0; j < tags.length; j++){
+			var h1Elements = frm.document.getElementsByTagName(tags[j]);
+			if(h1Elements.length==0){
+				counter++;
+			}
+			for(var i = 0; i < h1Elements.length; i++) {
+			   h1Elements[i].style.fontSize =((Math.sqrt(10)-Math.sqrt(j-counter+2))*(val))+"px";
+			}
+		}
+
+		  resize();
+		 	  
+	}
+	
+	function changeSpacing(){
+		  var frm=document.getElementById("Iframe").contentWindow;
+		  var val=document.getElementById("space").value;
+		
+		
+		var tags=["p","h1","h2","h3","h4","h5","h6"]
+		for(var j = 0; j < tags.length; j++){
+			var h1Elements = frm.document.getElementsByTagName(tags[j]);
+			for(var i = 0; i < h1Elements.length; i++) {
+			   h1Elements[i].style.lineHeight =(val*100) + '%';
+			}
+		}
+		
+		resize();
+	}
+	
+	
+	function printDiv() {
+            var frm = document.getElementById("Iframe").contentWindow;
+	    var con=frm.document.children[0].innerHTML;
+            var a = window.open('', '', 'height=500, width=500');
+            a.document.write(con);
+            a.document.close();
+            a.print();
+        }
+
+</script>
+
+<div class='content'>
+<div id="setting">
+  <label for="font">Font Style:</label>
+  <select id="font" onchange="changeFont()">
+    <option value="Handwritting">Handwritting</option>
+    <option value="Simple" selected>Simple</option>
+    <option value="Coding" >Coding</option>
+
+  </select>
+  
+     <label for="size">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Font Size:</label>
+     <input type="range" id="size" name="size" min="1" max="50" value="12" step="1" onchange="changeSize()">
+  
+     <label for="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Line Space:</label>
+     <input type="range" id="space" name="space" min="1" max="2" value="1" step="0.01" onchange="changeSpacing()">
+	
+     <input type="button" id="print" name="print" value="print" onclick="printDiv()">
+</div>
+
+<iframe id="Iframe" src="notes/ENGR_133.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no onload="initalizeStyle()"></iframe>
+</div>
+
+
+</body>
+</html>
