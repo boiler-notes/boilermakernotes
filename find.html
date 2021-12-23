@@ -17,6 +17,10 @@
     $(function(){
       $("#nav-placeholder").load("heading.html");
     });
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    setActive(page);
+    
 </script>
 
 </header>
