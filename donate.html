@@ -9,36 +9,23 @@
 
 </head>
 <body>
+
 <header>
-<div class="header">
+<script>
 
+function resize()
+        // function execute while load the iframe
+        {
+          var frame = document.getElementById("Iframe");
+          // set the height of the iframe as 
+          // the height of the iframe content
+          frame.style.height = 
+          (frame.contentWindow.document.body.scrollHeight + 50) + 'px';     
+        }
 
+</script>
 
-<h1 style="text-align:center; font-family: Fantasy; font-size: 50px;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: white;letter-spacing: 2px; color: rgb(206,184,136);">Boilermaker Notes</h1>
-</div>
-
-<div id="navbar">
-  <a  href="index.html">Home</a>
-  <a  href="find.html">Find</a>
-
-   <div class="dropdown">
-    <button class="dropbtn">Classes 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="CS_159_page.html">CS 159</a></br>
-      <a href="MA_261_page.html">MA 261</a></br>
-      <a href="ENGR_133_page.html">ENGR 133</a></br>
-    </div>
-  </div> 
-
-  <a class="active" href="javascript:void(0)">Donate</a>
-
-  
-</div>
-
-
-
+<iframe id="headbar" src="heading.html" style="width: 100%; height:10" frameBorder="0" scrolling=no onload="resize()"></iframe>
 
 </header>
 
