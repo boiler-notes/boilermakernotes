@@ -11,30 +11,16 @@
 </head>
 <body>
 <header>
-<div class="header">
-<h1 style="text-align:center; font-family: Fantasy; font-size: 50px;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: white;letter-spacing: 2px; color: rgb(206,184,136);">Boilermaker Notes</h1>
-</div>
+<div id="nav-placeholder"></div>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+    $(function(){
+      $("#nav-placeholder").load("heading.html");
+    });
+</script>
 
-<div id="navbar">
-  <a href="index.html">Home</a>
-  <a  class="active" href="javascript:void(0)">Find</a>
-
-   <div class="dropdown">
-    <button class="dropbtn">Classes 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">CS 159</a></br>
-      <a href="#">MA 261</a></br>
-      <a href="#">ENGR 133</a></br>
-    </div>
-  </div> 
-
-  <a href="donate.html">Donate</a>
-
-  
-</div>
 </header>
+
 
 <script>
 	
