@@ -17,16 +17,16 @@
 function resize()
         // function execute while load the iframe
         {
-          var frame = document.getElementById("Iframe");
+          var frame = document.getElementById("headbar");
           // set the height of the iframe as 
           // the height of the iframe content
           frame.style.height = 
-          (frame.contentWindow.document.body.scrollHeight + 50) + 'px';     
+          (frame.contentWindow.document.body.scrollHeight) + 'px';     
         }
 
 </script>
 
-<iframe id="headbar" src="heading.html" style="width: 100%; height:10" frameBorder="0" scrolling=no onload="resize()"></iframe>
+<iframe id="headbar" src="heading.html" style="width: 100%; height:10px; overflow: visible" frameBorder="0" scrolling=no onload="resize()"></iframe>
 
 </header>
 
