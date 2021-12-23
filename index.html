@@ -13,23 +13,13 @@
 <body onload="reportWindowSize()">
 
 <header>
+<div id="nav-placeholder"></div>
+<script src="//code.jquery.com/jquery.min.js"></script>
 <script>
-
-function resize()
-        // function execute while load the iframe
-        {
-          var frame = document.getElementById("headbar");
-          // set the height of the iframe as 
-          // the height of the iframe content
-          frame.style.height = 
-          (frame.contentWindow.document.body.scrollHeight) + 'px';     
-        }
-
+    $(function(){
+      $("#nav-placeholder").load("header.html");
+    });
 </script>
-
-<iframe id="headbar" src="heading.html" style="width: 100%; height:10px; overflow: visible" frameBorder="0" scrolling=no onload="resize()"></iframe>
-
-</header>
 
 
 
