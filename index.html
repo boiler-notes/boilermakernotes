@@ -13,8 +13,21 @@
 <body onload="reportWindowSize()">
 
 <header>
+<script>
 
-<iframe id="Iframe" src="Heading.html" style="width: 100%; height:10" frameBorder="0" scrolling=no onload="resize()"></iframe>
+function resize()
+        // function execute while load the iframe
+        {
+          var frame = document.getElementById("Iframe");
+          // set the height of the iframe as 
+          // the height of the iframe content
+          frame.style.height = 
+          (frame.contentWindow.document.body.scrollHeight + 50) + 'px';     
+        }
+
+</script>
+
+<iframe id="headbar" src="Heading.html" style="width: 100%; height:10" frameBorder="0" scrolling=no onload="resize()"></iframe>
 
 </header>
 
