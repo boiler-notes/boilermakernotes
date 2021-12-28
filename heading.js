@@ -32,7 +32,7 @@ function loadHeader() {
 					</button>\n\
 					<div class="dropdown-content">'
 		for (var i=0;i<names.length;i++){
-			name+='<a href="'+names[i][0]+'_'+names[i][1]+'_page.html">'+names[i][0]+' '+names[i][1]+'</a></br>'
+			nav+='<a href="'+names[i][0]+'_'+names[i][1]+'_page.html">'+names[i][0]+' '+names[i][1]+'</a></br>'
 		}
 		nav+='</div>\n\
 			</div> \n\
