@@ -1,7 +1,7 @@
 function isActive(name){
 	var path = window.location.pathname;
 	var page = path.split("/").pop();
-	if(page==name){
+	if(page==name+".html"){
 		return " active";
 	}
 	else
