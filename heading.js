@@ -13,10 +13,10 @@ function isActive(name){
 function loadHeader() {
 
 	let names =[
-					["CS",159],
-					["MA",261],
-					["ENGR",133]
-					];
+		["CS",159],
+		["MA",261],
+		["ENGR",133]
+		];
 	 var nav='<div class="header">\n\
 				<h1 style="text-align:center; font-family: Fantasy; font-size: 50px;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: white;letter-spacing: 2px; color: rgb(206,184,136);">\n\
 					Boilermaker Notes\n\
