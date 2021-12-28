@@ -6,33 +6,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
 
+<script type="text/javascript" src="heading.js"></script>
 
 </head>
 <body>
 
 <header>
-<div id="nav-placeholder"></div>
-<script src="//code.jquery.com/jquery.min.js"></script>
-<script>
-      function setActive(page){
-      var items=document.getElementsByTagName("*");
-      for(var i=0;i<items.length;i++){
-       if(items[i].href==page){
-        items[i].classlist.add("active");
-       }
-      }
-  }
-    
-    
-    $(function(){
-      $("#nav-placeholder").load("heading.html");
-      var path = window.location.pathname;
-      var page = path.split("/").pop();
-      setActive(page);
-    });
-
-    
-</script>
 
 </header>
 
