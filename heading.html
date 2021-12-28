@@ -37,13 +37,13 @@
 </div>
 </header>
 <script>
-  function setActive(page){
-      var items=document.getElementsByTagName("*");
+ document.addEventListener('DOMContentLoaded', function() {
+   var items=document.getElementsByTagName("*");
       for(var i=0;i<items.length;i++){
        if(items[i].href==page){
         items[i].classlist.add("active");
        }
       }
-  }
+}, false);
 </script>
 </body>
