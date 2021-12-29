@@ -25,9 +25,7 @@ function loadHeader() {
 		["ENGR",133]
 		];
 	 var nav='<div class="header">\n\
-				<h1 style="text-align:center; font-family: Fantasy; font-size: 50px;-webkit-text-stroke-width: 0.5px;-webkit-text-stroke-color: white;letter-spacing: 2px; color: rgb(206,184,136);">\n\
-					Boilermaker Notes\n\
-				</h1>\n\
+				Boilermaker Notes\n\
 			</div>\n\
 			<div id="navbar">\n\
 				<a class="'+isActive("index")+'" href="index.html">Home</a>\n\
