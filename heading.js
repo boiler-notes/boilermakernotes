@@ -6,7 +6,14 @@ function isActive(name){
 	}
 	else
 	{
-		return "";
+		if(page =="" && name=="index.html")
+		{
+			return " active";
+		}
+		else
+		{
+			return "";
+		}
 	}
 }
 
