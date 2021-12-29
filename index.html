@@ -77,42 +77,42 @@
 
 
 <script>
-function reportWindowSize() {
-	 var div1=document.getElementById("left");
-	 var div2=document.getElementById("right");
-	 var elementHeight=0
-	 div2.style.height="auto"
-	 div1.style.height="auto"
+	function reportWindowSize() {
+		 var div1=document.getElementById("left");
+		 var div2=document.getElementById("right");
+		 var elementHeight=0
+		 div2.style.height="auto"
+		 div1.style.height="auto"
 
-	 if(innerWidth*0.25>275){
-		div1.style.width = ((innerWidth-235)*0.25)+'px';
-		div2.style.width = ((innerWidth-235)*0.75) +'px';
+		 if(innerWidth*0.25>275){
+			div1.style.width = ((innerWidth-235)*0.25)+'px';
+			div2.style.width = ((innerWidth-235)*0.75) +'px';
 
-		 if(div1.offsetHeight>div2.offsetHeight){
-			var computedStyle = getComputedStyle(div1);
-			elementHeight = div1.offsetHeight;  // height with padding
-			elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
+			 if(div1.offsetHeight>div2.offsetHeight){
+				var computedStyle = getComputedStyle(div1);
+				elementHeight = div1.offsetHeight;  // height with padding
+				elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
 
-			div2.style.height = elementHeight-20 + 'px';
+				div2.style.height = elementHeight-20 + 'px';
+			 }else{
+				var computedStyle = getComputedStyle(div2);
+				elementHeight = div2.offsetHeight;  // height with padding
+				elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
+
+				div1.style.height = elementHeight-20 + 'px';
+			 }
+
+
 		 }else{
-			var computedStyle = getComputedStyle(div2);
-			elementHeight = div2.offsetHeight;  // height with padding
-			elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
-
-			div1.style.height = elementHeight-20 + 'px';
-		 }
-
-
-	 }else{
-		div1.style.width = (innerWidth-160) +'px';
-		div2.style.width = (innerWidth-160) +'px';
+			div1.style.width = (innerWidth-160) +'px';
+			div2.style.width = (innerWidth-160) +'px';
+		}
 	}
+	window.onresize = reportWindowSize;
 
-window.onresize = reportWindowSize;
-
-function donate(){
-	window.location.href = 'donate.html';
-}
+	function donate(){
+		window.location.href = 'donate.html';
+	}
 </script>
 </body>
 </html>
