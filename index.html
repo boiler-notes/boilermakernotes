@@ -9,7 +9,7 @@
 <script type="text/javascript" src="heading.js"></script>
 
 </head>
-<body onload="loadHeader()">
+<body onload="loadPage()">
 
 <header>
 
@@ -77,6 +77,7 @@
 
 
 <script>
+
 	function reportWindowSize() {
 		 var div1=document.getElementById("left");
 		 var div2=document.getElementById("right");
@@ -108,12 +109,12 @@
 			div2.style.width = (innerWidth-160) +'px';
 		}
 	}
-	window.onload = reportWindowSize;
 	window.onresize = reportWindowSize;
 
 	function donate(){
 		window.location.href = 'donate.html';
 	}
+	
 </script>
 </body>
 </html>
