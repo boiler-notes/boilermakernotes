@@ -25,7 +25,7 @@ function loadHeader() {
 		["ENGR",133]
 		];
 	 var nav='<div class="header">\n\
-				Boilermaker Notes\n\
+				Boiler Schubox\n\
 			</div>\n\
 			<div id="navbar">\n\
 				<a class="'+isActive("index")+'" href="index.html">Home</a>\n\
