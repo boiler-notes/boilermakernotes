@@ -1,35 +1,35 @@
 	
 	var id="content";
 		
-	function initalizeStyle(){
-		changeFont();
-		changeSize();
-		changeSpacing();
+	function initalizeStyle(item){
+		changeFont(item);
+		changeSize(item);
+		changeSpacing(item);
 	}
 	
-	function resize()
+	function resize(item)
         // function execute while load the iframe
         {
-          var frame = document.getElementById("Iframe");
+          var frame = document.getElementById(item);
           // set the height of the iframe as 
           // the height of the iframe content
           frame.style.height = 
           (frame.contentWindow.document.body.scrollHeight + 50) + 'px';     
         }
 
-	function changeFont(){
-		  var frm=document.getElementById("Iframe").contentWindow
+	function changeFont(item){
+		  var frm=document.getElementById(item).contentWindow
 		  frm.document.getElementById(id).classList.remove("Handwritting");
 		  frm.document.getElementById(id).classList.remove("Simple");
 		  frm.document.getElementById(id).classList.remove("Coding");
 		 
 		  frm.document.getElementById(id).classList.add(document.getElementById("font").value);
-		  resize();
+		  resize(item);
 		 	  
 	}
 	
-	function changeSize(){
-		  var frm=document.getElementById("Iframe").contentWindow
+	function changeSize(item){
+		  var frm=document.getElementById(item).contentWindow
 		  var val=document.getElementById("size").value;
 		
 		
@@ -49,8 +49,8 @@
 		 	  
 	}
 	
-	function changeSpacing(){
-		  var frm=document.getElementById("Iframe").contentWindow;
+	function changeSpacing(item){
+		  var frm=document.getElementById(item).contentWindow;
 		  var val=document.getElementById("space").value;
 		
 		
@@ -62,12 +62,12 @@
 			}
 		}
 		
-		resize();
+		resize(item);
 	}
 	
 	
-	function printDiv() {
-            var frm = document.getElementById("Iframe").contentWindow;
+	function printDiv(item) {
+            var frm = document.getElementById(item).contentWindow;
 	    var con=frm.document.children[0].innerHTML;
             var a = window.open('', '', 'height=500, width=500');
             a.document.write(con);
