@@ -67,10 +67,9 @@ function changeSpacing(item){
 
 
 function printDiv(item) {
-    var elements= document.getElementById("notes");
-    var con=frm.document.children[0].innerHTML;
+    var content= document.getElementById("notes");
     var a = window.open('', '', 'height=500, width=800');
-    a.document.write(con);
+    a.document.write(content);
     a.document.close();
     a.print();
 }
