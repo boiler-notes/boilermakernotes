@@ -1,4 +1,4 @@
-L
+
 var id="content";
 
 function initalizeStyle(item){
