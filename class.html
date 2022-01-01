@@ -10,7 +10,11 @@
 	
 <script type="text/javascript" src="heading.js"></script>
 <script type="text/javascript" src="custom.js"></script>
-
+<script>
+	note='<iframe id="Iframe" src="CS_159.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no onload="initalizeStyle(this)"></iframe>'
+	
+	
+</script>
 </head>
 <body onload="loadHeader()">
 
@@ -39,8 +43,9 @@
 	
      <input type="button" id="print" name="print" value="print" onclick="printDiv()">
 </div>
-
-<iframe id="Iframe" src="CS_159.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no onload="initalizeStyle()"></iframe>
+<div id="notes" onload="loadNotes()">
+	 
+</div>
 </div>
 
 
