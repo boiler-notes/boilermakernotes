@@ -45,7 +45,7 @@
 			}
 		}
 
-		  resize();
+		  resize(item);
 		 	  
 	}
 	
