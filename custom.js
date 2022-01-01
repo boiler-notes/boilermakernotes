@@ -10,7 +10,7 @@
 	function resize(item)
         // function execute while load the iframe
         {
-          var frame = document.getElementById(item);
+          var frame = item;
           // set the height of the iframe as 
           // the height of the iframe content
           frame.style.height = 
@@ -18,7 +18,7 @@
         }
 
 	function changeFont(item){
-		  var frm=document.getElementById(item).contentWindow
+		  var frm=item.contentWindow
 		  frm.document.getElementById(id).classList.remove("Handwritting");
 		  frm.document.getElementById(id).classList.remove("Simple");
 		  frm.document.getElementById(id).classList.remove("Coding");
@@ -29,7 +29,7 @@
 	}
 	
 	function changeSize(item){
-		  var frm=document.getElementById(item).contentWindow
+		  var frm=item.contentWindow
 		  var val=document.getElementById("size").value;
 		
 		
@@ -50,7 +50,7 @@
 	}
 	
 	function changeSpacing(item){
-		  var frm=document.getElementById(item).contentWindow;
+		  var frm=item.contentWindow;
 		  var val=document.getElementById("space").value;
 		
 		
@@ -67,7 +67,7 @@
 	
 	
 	function printDiv(item) {
-            var frm = document.getElementById(item).contentWindow;
+            var frm = item.contentWindow;
 	    var con=frm.document.children[0].innerHTML;
             var a = window.open('', '', 'height=500, width=500');
             a.document.write(con);
