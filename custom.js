@@ -64,16 +64,17 @@ function changeSpacing(item){
 
 	resize(item);
 }
-
-
-function printDiv(item) {
-    var content= document.getElementById("notes").innerHTML;
-    var a = window.open('', 'PRINT', 'height=500, width=800');
-    a.document.write(content);
-    a.document.close();
-    a.print();
+function printDiv() {
+    var data = $('#notes').html()
+    var printWin = window.open('', 'Print Preview', 'height=600,width=800');
+    printWin.document.write('<html><head><title>Print Preview</title>');
+    printWin.document.write('</head><body >');
+    printWin.document.write(data);
+    printWin.document.write('</body></html>');
+    printWin.print();
+    printWin.close();
+    return true;
 }
-
 
 function changeFontForAll(item){
 	var elements= document.getElementsByTagName("iframe");
