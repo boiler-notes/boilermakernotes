@@ -1,4 +1,4 @@
-
+L
 var id="content";
 
 function initalizeStyle(item){
@@ -67,7 +67,7 @@ function changeSpacing(item){
 
 
 function printDiv(item) {
-    var content= document.getElementById("notes").outerHTML;
+    var content= document.getElementById("notes").innerHTML;
     var a = window.open('', '', 'height=500, width=800');
     a.document.write(content);
     a.document.close();
