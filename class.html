@@ -38,6 +38,10 @@
 		newWindow.size=document.getElementById("size").value;
 		newWindow.space=document.getElementById("space").value;
 		 newWindow.document.write("<html><head>"+head+"</head><body>"+newWindowContent+"</body></html>");
+		newWindow.document.close();
+		newWindow.focus();
+		newWindow.print();
+		newWindow.close();
 	}
 
 </script>
