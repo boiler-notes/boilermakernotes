@@ -71,7 +71,7 @@ function printDiv() {
 
   newWin.document.open();
 
-  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+  newWin.document.write('<html><head><link rel="stylesheet" href="customize.css"></head><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
 
   newWin.document.close();
 
