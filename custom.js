@@ -1,10 +1,10 @@
 
 var id="content";
 
-function initalizeStyle(){
-	changeFontForAll();
-	changeSizeForAll();
-	changeSpacingForAll();
+function initalizeStyle(item){
+	changeFont(item);
+	changeSize(item);
+	changeSpacing(item);
 }
 
 function resize(item)
