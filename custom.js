@@ -65,15 +65,11 @@ function changeSpacing(item){
 	resize(item);
 }
 function printDiv() {
-    var data = $('#notes').html()
-    var printWin = window.open('', 'Print Preview', 'height=600,width=800');
-    printWin.document.write('<html><head><title>Print Preview</title>');
-    printWin.document.write('</head><body >');
-    printWin.document.write(data);
-    printWin.document.write('</body></html>');
-    printWin.print();
-    printWin.close();
-    return true;
+            const printContents = document.getElementById('notes').innerHTML;
+            const originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
 }
 
 function changeFontForAll(item){
