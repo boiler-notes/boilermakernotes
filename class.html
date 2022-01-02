@@ -53,12 +53,20 @@
 	<div class='content'>
 		<div id="setting">
 			<button class="print-button" onclick="printDiv()"><span class="print-icon"></span></button>
-			<label for="font">Font Style:</label>
-			<select id="font" onchange="changeFontForAll()">
-				<option value="Handwritting">Handwritting</option>
-				<option value="Simple" selected>Simple</option>
-				<option value="Coding" >Coding</option>
-			</select>
+			<div id="font" class="list-choice">
+			  <div class="list-choice-title">Font</div>
+			  <div class="list-choice-objects">
+			    <label>
+			      <input type="radio" name="month"/>                         <span>Simple</span>
+			    </label>
+			    <label>
+			      <input type="radio" name="month"/>                         <span>Coding</span>
+			    </label>
+			    <label>
+			      <input type="radio" name="month"/>                         <span>Handwritting</span>
+			    </label>
+			  </div>
+			</div>
 			<label for="size">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Font Size:</label>
 			<input type="range" id="size" name="size" min="1" max="50" value="12" step="1" onchange="changeSizeForAll()">
 
