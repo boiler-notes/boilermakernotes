@@ -73,7 +73,6 @@ function printDiv() {
 
   newWin.document.write('<html><head><link rel="stylesheet" href="customize.css"></head><body onload="">'+divToPrint.innerHTML+'</body></html>');
 
-  newWin.document.close();
 
   setTimeout(function(){newWin.close();},10);
 }
