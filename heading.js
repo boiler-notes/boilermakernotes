@@ -20,9 +20,9 @@ function isActive(name){
 function loadHeader() {
 
 	let names =[
-		["CS",159],
-		["MA",261],
-		["ENGR",133]
+		["CS",159,["CS_159"]],
+		["MA",261,[]],
+		["ENGR",133,["ENGR_133"]]
 		];
 	 var nav='<div class="header">\n\
 				Boiler Schubox\n\
@@ -37,11 +37,11 @@ function loadHeader() {
 					</button>\n\
 					<div class="dropdown-content">'
 		for (var i=0;i<names.length;i++){
-			nav+='<a href="'+names[i][0]+'_'+names[i][1]+'_page.html">'+names[i][0]+' '+names[i][1]+'</a></br>';
+			nav+='<a href=class.html?"'+names[i][2].join("|")+">'+names[i][0]+' '+names[i][1]+'</a></br>';
 		}
 		nav+='</div>\n\
 			</div> \n\
-			<a class="'+isActive("donate")+'" href="donate.html">Donate</a>\n\
+			<!--<a class="'+isActive("donate")+'" href="donate.html">Donate</a>\n\--!>
 			</div>';	 
 	 document.getElementsByTagName("header")[0].innerHTML = nav; 
 } 
