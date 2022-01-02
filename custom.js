@@ -64,18 +64,6 @@ function changeSpacing(item){
 
 	resize(item);
 }
-function printDiv() {
-  var divToPrint=document.getElementById('notes');
-
-  var newWin=window.open('','Print-Window');
-
-  newWin.document.open();
-
-  newWin.document.write('<html><head><link rel="stylesheet" href="customize.css"></head><body onload="">'+divToPrint.innerHTML+'</body></html>');
-
-
-  setTimeout(function(){newWin.close();},10);
-}
 
 function changeFontForAll(item){
 	var elements= document.getElementsByTagName("iframe");
