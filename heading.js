@@ -41,7 +41,7 @@ function loadHeader() {
 		}
 		nav+='</div>\n\
 			</div> \n\
-			<!--<a class="'+isActive("donate")+'" href="donate.html">Donate</a>\n\-->
+
 			</div>';	 
 	 document.getElementsByTagName("header")[0].innerHTML = nav; 
 } 
