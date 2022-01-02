@@ -1,3 +1,5 @@
+var id="content";
+
 function initalizeStyle(item){
 	changeFont(item);
 	changeSize(item);
