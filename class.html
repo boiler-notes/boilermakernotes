@@ -6,7 +6,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="customize.css">
-	
+    <style>
+      .box {
+        width: 120px;
+        height: 30px;
+        border: 1px solid #999;
+        font-size: 18px;
+        color: #1c87c9;
+        background-color: #eee;
+        border-radius: 5px;
+        box-shadow: 4px 4px #ccc;
+      }
+    </style>
 	
 <script type="text/javascript" src="heading.js"></script>
 <script type="text/javascript" src="custom.js"></script>
@@ -52,21 +63,14 @@
 	
 	<div class='content'>
 		<div id="setting">
-			<button class="print-button" onclick="printDiv()"><span class="print-icon"></span></button>
-			<div id="font" class="list-choice">
-			  <div class="list-choice-title">Font</div>
-			  <div class="list-choice-objects">
-			    <label>
-			      <input type="radio" name="month"/>                         <span>Simple</span>
-			    </label>
-			    <label>
-			      <input type="radio" name="month"/>                         <span>Coding</span>
-			    </label>
-			    <label>
-			      <input type="radio" name="month"/>                         <span>Handwritting</span>
-			    </label>
-			  </div>
-			</div>
+			
+			    <select id="font" class="box">
+			      <option value="Simple">Simple</option>
+			      <option value="Coding">Coding</option>
+			      <option value="Handwritting">Handwritting</option>
+			    </select>
+			
+			
 			<label for="size">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Font Size:</label>
 			<input type="range" id="size" name="size" min="1" max="50" value="12" step="1" onchange="changeSizeForAll()">
 
