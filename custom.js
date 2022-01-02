@@ -65,10 +65,16 @@ function changeSpacing(item){
 	resize(item);
 }
 function printDiv() {
-	var mywindow = window.open();
-	var content = document.getElementById("notes").innerHTML;
-	mywindow.document.write(content);
-	mywindow.print();
+      var mywindow = window.open();
+      var content = document.getElementById("notes").innerHTML;
+      var realContent = document.body.innerHTML;
+      mywindow.document.write(content);
+      mywindow.document.close(); // necessary for IE >= 10
+      mywindow.focus(); // necessary for IE >= 10*/
+      mywindow.print();
+      document.body.innerHTML = realContent;
+      mywindow.close();
+      return true;
 }
 
 function changeFontForAll(item){
