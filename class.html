@@ -24,17 +24,10 @@
 	}
 
 	function printDiv() {
-	  var divToPrint=document.getElementById('notes');
 
-	  var newWin=window.open('','Print-Window');
-
-	  newWin.document.open();
-
-	  newWin.document.write('<html><head><link rel="stylesheet" href="customize.css"></head><body onload="">'+divToPrint.innerHTML+'</body></html>');
-
-	  newWin.document.close();
-
-	  setTimeout(function(){newWin.close();},10);
+		 var newWindowContent = document.getElementById('notes').innerHTML;
+		 var newWindow = window.open("", "", "width=500,height=400");
+		 newWindow.document.write(newWindowContent);
 	}
 
 </script>
