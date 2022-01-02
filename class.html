@@ -10,6 +10,7 @@
 	
 <script type="text/javascript" src="heading.js"></script>
 <script type="text/javascript" src="custom.js"></script>
+
 	
 <script>
 	function loadNotes(){
@@ -20,6 +21,20 @@
 			note='<iframe id="Iframe" src="'+data[i]+'.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no onload="initalizeStyle(this)"></iframe>';
 			contentnotes.innerHTML+=note;
 		}
+	}
+
+	function printDiv() {
+	  var divToPrint=document.getElementById('notes');
+
+	  var newWin=window.open('','Print-Window');
+
+	  newWin.document.open();
+
+	  newWin.document.write('<html><head><link rel="stylesheet" href="customize.css"></head><body onload="">'+divToPrint.innerHTML+'</body></html>');
+
+	  newWin.document.close();
+
+	  setTimeout(function(){newWin.close();},10);
 	}
 
 </script>
