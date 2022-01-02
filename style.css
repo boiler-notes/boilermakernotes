@@ -211,14 +211,14 @@ button {
     padding: 14px;
   }
 button.print-button {
-  width: 10px;
-  height: 10px;
+  width: 40px;
+  height: 40px;
 }
 span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
-  border: solid 4px #333;
+  border: solid 1px #333;
 }
 span.print-icon::after {
-  border-width: 2px;
+  border-width: 1px;
 }
 
 button.print-button {
