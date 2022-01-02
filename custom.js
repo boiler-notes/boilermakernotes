@@ -65,11 +65,10 @@ function changeSpacing(item){
 	resize(item);
 }
 function printDiv() {
-            const printContents = document.getElementById('notes').innerHTML;
-            const originalContents = document.body.innerHTML;
-            document.body.innerHTML = printContents;
-            window.print();
-            document.body.innerHTML = originalContents;
+	var mywindow = window.open();
+	var content = document.getElementById("notes").innerHTML;
+	mywindow.document.write(content);
+	mywindow.print();
 }
 
 function changeFontForAll(item){
