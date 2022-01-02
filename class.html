@@ -33,7 +33,8 @@
 		head+='/script>'
 		 var newWindowContent = document.getElementById('notes').innerHTML;
 		 var newWindow = window.open("", "", "width=500,height=400");
-		newWindow.font=document.getElementById("font").value;
+		var ft=document.getElementById("font").value
+		newWindow.font=ft;
 		newWindow.size=document.getElementById("size").value;
 		newWindow.space=document.getElementById("space").value;
 		 newWindow.document.write("<html><head>"+head+"</head><body>"+newWindowContent+"</body></html>");
