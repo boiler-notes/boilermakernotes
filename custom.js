@@ -1,10 +1,10 @@
 
 var id="content";
 
-function initalizeStyle(item){
-	changeFont(item);
-	changeSize(item);
-	changeSpacing(item);
+function initalizeStyle(){
+	changeFontForAll();
+	changeSizeForAll();
+	changeSpacingForAll();
 }
 
 function resize(item)
@@ -65,21 +65,21 @@ function changeSpacing(item){
 	resize(item);
 }
 
-function changeFontForAll(item){
+function changeFontForAll(){
 	var elements= document.getElementsByTagName("iframe");
 	for(var i=0;i<elements.length;i++){
 		changeFont(elements[i]);
 	}
 }
 
-function changeSizeForAll(item){
+function changeSizeForAll(){
 	var elements= document.getElementsByTagName("iframe");
 	for(var i=0;i<elements.length;i++){
 		changeSize(elements[i]);
 	}
 }
 
-function changeSpacingForAll(item){
+function changeSpacingForAll(){
 	var elements= document.getElementsByTagName("iframe");
 	for(var i=0;i<elements.length;i++){
 		changeSpacing(elements[i]);
