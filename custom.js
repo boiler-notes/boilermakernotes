@@ -65,16 +65,17 @@ function changeSpacing(item){
 	resize(item);
 }
 function printDiv() {
-      var mywindow = window.open();
-      var content = document.getElementById("notes").innerHTML;
-      var realContent = document.body.innerHTML;
-      mywindow.document.write(content);
-      mywindow.document.close(); // necessary for IE >= 10
-      mywindow.focus(); // necessary for IE >= 10*/
-      mywindow.print();
-      document.body.innerHTML = realContent;
-      mywindow.close();
-      return true;
+  var divToPrint=document.getElementById('notes');
+
+  var newWin=window.open('','Print-Window');
+
+  newWin.document.open();
+
+  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+  newWin.document.close();
+
+  setTimeout(function(){newWin.close();},10);
 }
 
 function changeFontForAll(item){
