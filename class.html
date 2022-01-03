@@ -34,16 +34,10 @@
 		}
 	}
 	function breakdown(elem){
-		if(elem.tagName == 'IFRAME'){
-			elem=elem.contentWindow.document.body.innerHTML;
-		}else{
-			var sub= elem.childNodes;
-			if(sub.length!=0){
-				for (var i=0;i<sub.length;i++){
-					var child=breakdown(sub[i])
-					var temp=new DOMParser().parseFromString(child, 'text/html').body.firstElementChild
-					elem.replaceChild(temp,sub[i]);
-				}
+		var subelem=elem.getElementsByTagName("*");
+		for(var i=0;i<subelem.length;i++){
+			if(subelem[i].tagname=="IFRAME"){
+				subelem[i]=subelem[i].document.body.innerHTML;
 			}
 		}
 		return elem;
