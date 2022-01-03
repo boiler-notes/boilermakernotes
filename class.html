@@ -41,7 +41,7 @@
 			if(sub.length!=0){
 				for (var i=0;i<sub.length;i++){
 					var temp=breakdown(sub[i])
-					elem.childNodes.replaceChild(temp,sub[i]);
+					elem.childNodes[i].replaceChild(temp,sub[i]);
 				}
 			}
 		}
