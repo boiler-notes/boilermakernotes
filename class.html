@@ -40,7 +40,7 @@
 			var sub= elem.childNodes;
 			if(sub.length!=0){
 				for (var i=0;i<sub.length;i++){
-					var temp=breakdown(sub[i])
+					var temp=new DOMParser().parseFromString(breakdown(sub[i]));
 					elem.childNodes[i].replaceChild(temp,sub[i]);
 				}
 			}
@@ -55,10 +55,10 @@
 		head+='/script>'
 		head+='<script type="text/javascript" src="printScript.js"><'
 		head+='/script>'
-		 var windowBreakdown=breakdown(document.getElementById('notes'))
+		 var windowBreakdown=breakdown(document.getElementById('notes'));
 		 var newWindowContent = windowBreakdown.innerHTML;
 		 var newWindow = window.open("", "", "width=800,height=400");
-		var ft=document.getElementById("font").value
+		var ft=document.getElementById("font").value;
 		newWindow.font=ft;
 		newWindow.size=document.getElementById("size").value;
 		newWindow.space=document.getElementById("space").value;
