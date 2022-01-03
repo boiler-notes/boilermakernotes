@@ -40,7 +40,8 @@
 			var sub= elem.childNodes;
 			if(sub.length!=0){
 				for (var i=0;i<sub.length;i++){
-					sub[i]=breakdown(sub[i]);
+					var temp=breakdown(sub[i])
+					sub[i]=temp;
 				}
 			}
 			elem.childNodes=sub;
