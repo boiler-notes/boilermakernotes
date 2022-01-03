@@ -64,7 +64,7 @@ function changeSpacing(item){
 	resize(item);
 }
 function printPrep(){
-	var subelem=document.getElementsByTagName("*");
+	var subelem=window.getElementsByTagName("*");
 	for(var i=0;i<subelem.length;i++){
 		if(subelem[i].tagName=="IFRAME"){
 			subelem[i].parentElement.innerHTML=subelem[i].contentWindow.document.body.innerHTML;
