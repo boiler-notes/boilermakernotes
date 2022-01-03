@@ -48,7 +48,8 @@
 		newWindow.font=ft;
 		newWindow.size=document.getElementById("size").value;
 		newWindow.space=document.getElementById("space").value;
-		newWindow.document.write("<html><head>"+head+"</head><body onload='printPrep(document.getElementById('notes'))'>"+newWindowContent+"</body></html>");
+		var startFunc="printPrep(document.getElementById('notes'))";
+		newWindow.document.write("<html><head>"+head+"</head><body onload='"+startFunc+"'>"+newWindowContent+"</body></html>");
 		newWindow.document.close();
 	}
 
