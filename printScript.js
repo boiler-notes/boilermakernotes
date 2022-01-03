@@ -63,7 +63,8 @@ function changeSpacing(item){
 
 	resize(item);
 }
-function printPrep(elem){
+function printPrep(){
+	var elem=document.getElementById('notes');
 	initalizeStyle(elem);
 	var subelem=elem.getElementsByTagName("*");
 	for(var i=0;i<subelem.length;i++){
