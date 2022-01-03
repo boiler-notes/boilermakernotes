@@ -29,7 +29,7 @@
 		var data = queryString.split("|");
 		var contentnotes = document.getElementById("notes");
 		for(var i=0;i<data.length;i++){
-			note='<iframe id="Iframe" src="'+data[i]+'.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no onload="initalizeStyle(this)"></iframe>';
+			note='<div><div><div><iframe id="Iframe" src="'+data[i]+'.htm" style="width: 100%; height:1000px" frameBorder="0" scrolling=no onload="initalizeStyle(this)"></iframe></div></div></div>';
 			contentnotes.innerHTML+=note;
 		}
 	}
@@ -77,7 +77,7 @@
 			<label for="space">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Line Space:</label>
 			<input type="range" id="space" name="space" min="1" max="2" value="1" step="0.01" onchange="changeSpacingForAll()">
 		</div>
-		<div id="notes"></div>
+		<div id="notes"><div></div></div>
 		<script>loadNotes()</script>
 
 
