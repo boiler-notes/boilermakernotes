@@ -38,8 +38,10 @@
 			elem=elem.contentWindow.document;
 		}else{
 			var sub= elem.childNodes;
-			for (var i=0;i<sub.length;i++){
-				sub[i]=breakdown(sub[i]);
+			if(sub.length!=0){
+				for (var i=0;i<sub.length;i++){
+					sub[i]=breakdown(sub[i]);
+				}
 			}
 			elem.childNodes=sub;
 		}
