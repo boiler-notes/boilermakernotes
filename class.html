@@ -39,7 +39,7 @@
 		}else{
 			var sub= elem.childNodes;
 			for (var i=0;i<sub.length;i++){
-				breakdown(sub[i]);
+				sub[i]=breakdown(sub[i]);
 			}
 		}
 		return elem;
