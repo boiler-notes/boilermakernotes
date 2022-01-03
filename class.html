@@ -33,7 +33,17 @@
 			contentnotes.innerHTML+=note;
 		}
 	}
-
+	function breakdown(elem){
+		if(elem.tagName == 'iframe'){
+			elem=elem.contentWindow.document.body.innerHTML;
+		}else{
+			var sub= elem.childNodes;
+			for (var i=0;i<sub.length;i++){
+				breakdown(sub[i]);
+			}
+		}
+		return elem;
+	}
 	function printDiv() {
 		 var head='<meta name="viewport" content="width=device-width, initial-scale=1">'
 		head+='<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">'
@@ -42,7 +52,7 @@
 		head+='/script>'
 		head+='<script type="text/javascript" src="printScript.js"><'
 		head+='/script>'
-		 var subelements=document.getElementById('notes').getElementsByTagName("*")
+		 var windowBreakdown=breakdown(document.getElementById('notes'))
 		 var newWindowContent = document.getElementById('notes').innerHTML;
 		 var newWindow = window.open("", "", "width=800,height=400");
 		var ft=document.getElementById("font").value
