@@ -35,7 +35,7 @@
 	}
 	function breakdown(elem){
 		if(elem.tagName == 'IFRAME'){
-			elem=elem.contentWindow.document.body.innerHTML;
+			elem=elem.contentWindow.document;
 		}else{
 			var sub= elem.childNodes;
 			for (var i=0;i<sub.length;i++){
