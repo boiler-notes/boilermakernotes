@@ -64,8 +64,7 @@ function changeSpacing(item){
 	resize(item);
 }
 function printPrep(){
-	var elem=document.getElementById('notes');
-	var subelem=elem.getElementsByTagName("*");
+	var subelem=document.getElementsByTagName("*");
 	for(var i=0;i<subelem.length;i++){
 		if(subelem[i].tagName=="IFRAME"){
 			subelem[i].parentElement.innerHTML=subelem[i].contentWindow.document.body.innerHTML;
