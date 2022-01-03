@@ -36,7 +36,7 @@
 	function breakdown(elem){
 		var subelem=elem.getElementsByTagName("*");
 		for(var i=0;i<subelem.length;i++){
-			if(subelem[i].tagname=="IFRAME"){
+			if(subelem[i].tagName=="IFRAME"){
 				subelem[i]=subelem[i].document.body.innerHTML;
 			}
 		}
