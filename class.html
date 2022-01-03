@@ -53,7 +53,7 @@
 		head+='<script type="text/javascript" src="printScript.js"><'
 		head+='/script>'
 		 var windowBreakdown=breakdown(document.getElementById('notes'))
-		 var newWindowContent = document.getElementById('notes').innerHTML;
+		 var newWindowContent = windowBreakdown.innerHTML;
 		 var newWindow = window.open("", "", "width=800,height=400");
 		var ft=document.getElementById("font").value
 		newWindow.font=ft;
