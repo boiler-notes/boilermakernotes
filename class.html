@@ -37,7 +37,7 @@
 		var subelem=elem.getElementsByTagName("*");
 		for(var i=0;i<subelem.length;i++){
 			if(subelem[i].tagName=="IFRAME"){
-				subelem[i]=subelem[i].document.body.innerHTML;
+				subelem[i]=subelem[i].contentWindow.document.body.innerHTML;
 			}
 		}
 		return elem;
