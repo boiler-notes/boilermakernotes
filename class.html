@@ -40,7 +40,8 @@
 			var sub= elem.childNodes;
 			if(sub.length!=0){
 				for (var i=0;i<sub.length;i++){
-					var temp=new DOMParser().parseFromString(breakdown(sub[i]), 'text/html');
+					var child=breakdown(sub[i])
+					var temp=new DOMParser().parseFromString(child, 'text/html');
 					elem.replaceChild(temp,sub[i]);
 				}
 			}
