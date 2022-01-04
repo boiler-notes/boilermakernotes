@@ -11,17 +11,12 @@
 <script>
 
 	function reportWindowSize() {
-		 var div1=document.getElementById("left");
-		 var div2=document.getElementById("right");
-		 var elementHeight=0
-		 div2.style.height="auto"
-		 div1.style.height="auto"
-
-		 if(innerWidth*0.25>275){
-			div1.style.width = ((innerWidth-230)*0.25)+'px';
-			div2.style.width = ((innerWidth-231)*0.75) +'px';
-
-			 if(div1.offsetHeight>div2.offsetHeight){
+		var div1=document.getElementById("left");
+		var div2=document.getElementById("right");
+		var elementHeight=0;
+		div2.style.height="auto";
+		div1.style.height="auto";
+		if(div1.offsetHeight>div2.offsetHeight){
 				var computedStyle = getComputedStyle(div1);
 				elementHeight = div1.offsetHeight;  // height with padding
 				elementHeight -= parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom);
@@ -34,12 +29,6 @@
 
 				div1.style.height = elementHeight-20 + 'px';
 			 }
-
-
-		 }else{
-			div1.style.width = (innerWidth-150) +'px';
-			div2.style.width = (innerWidth-150) +'px';
-		}
 	}
 	window.onresize = reportWindowSize;
 
@@ -79,32 +68,30 @@
 	</div>
 </div>
 
-
-
-<div class="container" style="float: right; ">
-	<div class="containerhead">
-       <p class="textheader">Current Features</p>
+<div class="fullouter">
+	<div class="right-div">
+		<div class="containerhead textheader">
+			Contact
+		</div>
+  
+		<div id="right" class="containercontent describe">
+			Email: boilermakersnotes@gmail.com</br>
+			Use this eamial to reach out about concerns or errors in the notes
+		</div>
 	</div>
-	<div id="right" class="containercontent" style="height: auto; min-height:150 px">
-	   <ul class="describe" >
+	
+	<div class="left-div">
+		<div class="containerhead textheader">
+			Currect Features
+		</div>
+		<div id="left" class="containercontent describe">
+			<ul class="describe" >
 			<li>Course pages which will display class note and studyguides</li>
 			<li>Customizable styles and formatting for easy readability</li>
 			<li>Find section so that you can search for current topics</li>
 
-	</ul>
-	</div>
-</div>
-
-<div  class="container" style="float: right; ">
-	<div class="containerhead">
-       <p class="textheader">Contact</p>
-	</div>
-	<div id="left" class="containercontent" style="height: auto; min-height:150 px">
-	Email: boilermakernotes@gmail.com</br>
-	use this  to reach out about concerns or to report errors in notes</br>
-	<!--<button onclick="donate()"style="width: 100%; display: inline-block; height: 50px; background-color:black; color:white;  text-align: center; font-size: 20px">
-	Venmo
-	</button>-->
+			</ul>
+		</div>
 	</div>
 </div>
 
