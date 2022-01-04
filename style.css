@@ -48,7 +48,17 @@ body {
 
 
 }
+.container {
 
+	border-color: rgb(0,0,0);
+	border-style: solid;
+	border-width: 1px;
+	background-color: rgb(0,0,0);
+	border-radius: 20px 20px 20px 20px;
+
+	float: left;
+    	width: 100%;
+}
 
 .containercontent {
 
