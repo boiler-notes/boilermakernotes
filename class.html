@@ -70,18 +70,14 @@
 				<option value="Handwritting">Handwritting</option>
 			</select>
 			
-			<div class="font">
-				<label for="size">Font Size</label>
-				<input id="size" class="slider" type="range" min="0" max="50" value="12" step="1" oninput="outputUpdatesize(value)">
-				<output for="size" id="size_out" style="width:100px">12</output>
-			</div>
+			<label for="size">Font Size</label>
+			<input id="size" class="slider" type="range" min="0" max="50" value="12" step="1" oninput="outputUpdatesize(value)">
+			<output for="size" id="size_out" style="width:100px">12</output>
 
-			
-			<div class="font">
-				<label for="space">Font Size</label>
-				<input id="space" class="slider" type="range" min="0" max="50" value="12" step="1" oninput="outputUpdatespace(value)">
-				<output for="space" id="space_out" style="width:100px">12</output>
-			</div>
+			<label for="space">Font Size</label>
+			<input id="space" class="slider" type="range" min="0" max="50" value="12" step="1" oninput="outputUpdatespace(value)">
+			<output for="space" id="space_out" style="width:100px">12</output>
+
 			<script>
 				function outputUpdatesize(vol) {
 					document.querySelector('#size_out').value = vol;
