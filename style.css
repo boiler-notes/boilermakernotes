@@ -297,6 +297,7 @@ button.print-button:hover .print-icon::after {
 }
 
 .font{
+	display:inline-block;
 	vertical-align: middle;
 	padding-left:10px;
 	padding-right: 10px;
