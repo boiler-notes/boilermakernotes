@@ -52,7 +52,7 @@ function changeSize(item){
 function changeSpacing(item){
 	  var frm=item.contentWindow;
 	  var val=document.getElementById("space").value;
-
+	  document.querySelector('#space_out').value = val;
 
 	var tags=["p","h1","h2","h3","h4","h5","h6"]
 	for(var j = 0; j < tags.length; j++){
