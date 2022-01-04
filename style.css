@@ -296,18 +296,16 @@ button.print-button:hover .print-icon::after {
   transition: height .2s .15s, border-width 0s .16s;
 }
 
-	.font{
-		display: table-cell;
-		vertical-align: middle;
+.font{
+	display: table-cell;
+	vertical-align: middle;
+	margin-left: 25px;
+	margin-right: 25px;
+	background-color: white;
+	text-align: center;
+	border-radius: 100px;
 
-		height: 50px;
-		border: 10px solid var(--primary);
-		background-color: white;
-		width: 350px;
-		text-align: center;
-		border-radius: 100px;
-	
-	}
+}
 
 input[type=range] {
   width: 200px;
