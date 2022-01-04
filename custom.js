@@ -31,7 +31,7 @@ function changeFont(item){
 function changeSize(item){
 	  var frm=item.contentWindow
 	  var val=document.getElementById("size").value;
-
+	  document.querySelector('#size_out').value = val;
 
 	var tags=["h1","h2","h3","h4","h5","h6","p"]
 	var counter=0
