@@ -21,7 +21,7 @@ function loadHeader() {
 
 	let names =[
 		["CS",159,["CS_159"]],
-		["MA",261,[]],
+		["MA",261,["MA_261_final"]],
 		["ENGR",133,["ENGR_133"]]
 		];
 	 var nav='<div class="header">\n\
