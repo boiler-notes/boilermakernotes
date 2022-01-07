@@ -22,7 +22,7 @@ function loadHeader() {
 	let names =[
 		["CS",159,["CS_159"]],
 		["MA",261,["MA_261_final"]],
-		["ENGR",133,["ENGR_133"]]
+		["ENGR",133,["ENGR_133","ENGRmatlab"]]
 		];
 	 var nav='<div class="header">\n\
 				Boiler Schubox\n\
